@@ -31,7 +31,7 @@ this document for new scripts.
 * Heading 2 to 6 I update the styles to remove all before/after spacing, set the point size to 12, change the color to purple, adjust the indent, then update the style to match the headings.
 * Open "Tools" / "Script Editor" from the menu.
 * Change the default project title at the top to something you will remember (e.g. "Comic Script Formatter"). This will be used as the name in the "Add-ons" menu.
-* Copy the contents of the JavaScript file in this repo (Code.js) into the script window.
+* Copy the contents of the JavaScript file in this repo ([Code.js](Code.js)) into the script window.
 * Save the script.
 * Type in a sample document (example below) and then select "Add-ons" / "Comic Script Formatter" / "Update formatting". This will reformat the script contents.
 

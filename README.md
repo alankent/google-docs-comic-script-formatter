@@ -1,5 +1,6 @@
 # A Google Docs extension for formatting comic scripts
 
+
 ## What is this extension?
 
 This extension applies styling to a Google Document following the rules below.
@@ -15,6 +16,7 @@ Hollywood script. This extension adapts the format used in these intructions.
 You might like to check out [Fountainize](https://workspace.google.com/marketplace/app/fountainize/82574770793)
 if youwant a more traditional formatter for movie scripts.
 (I have no affiliation with Fountainize.)
+
 
 ## Set up
 
@@ -33,7 +35,8 @@ this document for new scripts.
 * Save the script.
 * Type in a sample document (example below) and then select "Add-ons" / "Comic Script Formatter" / "Update formatting". This will reformat the script contents.
 
-## Formatting rules.
+
+## Formatting rules
 
 This extension relies on markup inside the script (so it is visible to the reader)
 to work out how to format different content. Google Docs currently only supports 
@@ -61,11 +64,14 @@ to be the title page or similar introductory text. So you MUST have a paragraph 
 This differs from the standard rules for formatting a little to make it easier to implement the formatter.
 For example, I use "-" around character names to spot them more reliably.
 
+
 ## How I use it
 
 - You have to type in extra chracters (e.g. "-" around character names), but while writing the script I don't worry about the indentation or bold etc. Every so often, I re-run the formatter ("Add-ons" / "Comic Script Formatter" / "Update formatting") and it will do the formatting for me.
 - Level 1 headings are left for the script writer (e.g. for "Notes", "Script", and other top level sections).
 - When writing a script, I start with an outline of only headings ("#" to "#####" - h2 to h5). I flesh out the overall structure.
+- Next pass I write out the dialog (character names and what they say). I iterate on that until I am happy.
+- I then do another pass to add in "[1-10-100]" style numbers, one per comic frame. I add extra notes as actions. This is where I decide what dialog goes on the same frame.
 - I use a table of contents extension to provide an episode outline. As I insert additional detail between the headings, I can see the table of contents in the side bar, allowing me to at a glance remember the overall structure of the document.
 - I use [N-NN-NNN] for episode number, location number, and shot numbers (e.g. "[1-10-100]"). I increment the location and shot numbers by 10 to make it easier to insert new frames later between existing numbers (e.g., "[1-15-200]"). Padding the numbers (starting from "X-10-100") has an advantage that the strings will sort easily, e.g. when used as file names in a directory for each frame.
 - All dialog I do in upper case. Sorry, this extension won't work if you use lower case text in dialog. You can look at the code and implement your own rules like spotting paragraphs starting and ending with quotes or similar.
@@ -73,9 +79,9 @@ For example, I use "-" around character names to spot them more reliably.
 - For the comic font I use, "{" and "}" are shown as crows feet, allowing simple inline "{GROAN}" for emotions.
 
 
-## Example:
+## Example
 
-The following shows gives a feeling of what i would type in and format myself. I would style the first line with "Title" style, the second line with "Sub-title", and the third line with "Heading 1" manually in Google docs.
+The following shows gives a feeling of what i would type in and format myself. I would style the first line with "Title" style, the second line with "Sub-title", and the third line with "Heading 1" manually in Google docs. The rest I just type in (Normal paragraph style).
 
 ```
                 MY TITLE DOCUMENT

@@ -23,7 +23,7 @@ this document for new scripts.
 
 * Create a new blank Google Doc
 * Type in 7 paragraphs with a couple of words per paragraph so you can see the styling. Leave the first paragraph as "Normal" and change the following paragraphs to "Heading 1" to "Heading 6".
-* For the first Normal paragraph, change the font to 12 point "Courier New". This is a script writing standard.
+* For the first Normal paragraph, change the font to 12 point "Courier New". This is a script writing standard - you can use any font you like if you don't care about following standards. It is a throwback to the old manual typewriter days.
 * Select "Normal" from the style drop down, then open "Normal Text" and select "Update 'Normal text' to match" from the sub-menu. This will change all the text in the document to use Courier font.
 * Heading 1 I personally change to a different color, but leave as a big font. I use it for headings such as "Script", "Overview", "Appendix", or other sections as I deem appropriate.
 * Heading 2 to 6 I update the styles to remove all before/after spacing, set the point size to 12, change the color to purple, adjust the indent, then update the style to match the headings.
@@ -31,14 +31,14 @@ this document for new scripts.
 * Change the default project title at the top to something you will remember (e.g. "Comic Script Formatter"). This will be used as the name in the "Add-ons" menu.
 * Copy the contents of the JavaScript file in this repo (Code.js) into the script window.
 * Save the script.
-* Type in a sample document (example below) and then select "Add-ons" / "Comic Script Formatter" / "Update formatting".
+* Type in a sample document (example below) and then select "Add-ons" / "Comic Script Formatter" / "Update formatting". This will reformat the script contents.
 
 ## Formatting rules.
 
 This extension relies on markup inside the script (so it is visible to the reader)
 to work out how to format different content. Google Docs currently only supports 
 heading 1 to 6 and normal paragraphs, so most formatting involves adjusting the 
-indenntation of normal paragraphs.
+indenntation of Normal paragraphs.
 
 Paragraph styles:
 
@@ -58,31 +58,29 @@ Everything before the first "EXT.", "INT.", or "# " heading is never touched in 
 to be the title page or similar introductory text. So you MUST have a paragraph starting with
 "INT.", "EXT.", or "# " for this extension to do anything.
 
-
+This differs from the standard rules for formatting a little to make it easier to implement the formatter.
+For example, I use "-" around character names to spot them more reliably.
 
 ## How I use it
 
-- Level 1 headings are left for the script writer (e.g. for "Notes", "Script", and other top level sections)
-- When writing a script, I start with an outline of headings ("#" to "#####" - h2 to h5)
-- I use a table of contents extension to provide an episode outline
-- As I flesh out sections, I leave the headings in place (so I can still see the outline structure later)
-- I am writing comics, not movies, so I adapted the screenwriting style a little
-- I use [N-NN-NNN] for episode number, location number, and shot numbers.
-- I increment the location and shot numbers by 10 to make it easier to insert new frames later between existing numbers.
-- Because the text in [..] is bolded, they act like sub-headings (but )
-- All dialog I do upper case because most comics use upper case.
-- For comics, the word "I" has horizontal bars at the top and bottom, but otherwise it should not. 
-  (That is, the letter captial I is formatted differently based on usage).
-  So I use "|" (vertical bar) for the word "I" which is what the comic font I use does.
-- For comics, "{" and "}" are shown as crows feet, allowing simple inline "{GROAN}" for emotions.
+- You have to type in extra chracters (e.g. "-" around character names), but while writing the script I don't worry about the indentation or bold etc. Every so often, I re-run the formatter ("Add-ons" / "Comic Script Formatter" / "Update formatting") and it will do the formatting for me.
+- Level 1 headings are left for the script writer (e.g. for "Notes", "Script", and other top level sections).
+- When writing a script, I start with an outline of only headings ("#" to "#####" - h2 to h5). I flesh out the overall structure.
+- I use a table of contents extension to provide an episode outline. As I insert additional detail between the headings, I can see the table of contents in the side bar, allowing me to at a glance remember the overall structure of the document.
+- I use [N-NN-NNN] for episode number, location number, and shot numbers (e.g. "[1-10-100]"). I increment the location and shot numbers by 10 to make it easier to insert new frames later between existing numbers (e.g., "[1-15-200]"). Padding the numbers (starting from "X-10-100") has an advantage that the strings will sort easily, e.g. when used as file names in a directory for each frame.
+- All dialog I do in upper case. Sorry, this extension won't work if you use lower case text in dialog. You can look at the code and implement your own rules like spotting paragraphs starting and ending with quotes or similar.
+- For the comic font I use, the word "I" has horizontal bars at the top and bottom, but otherwise it should not. (That is, the letter captial I is formatted differently based on usage). So I use "|" (vertical bar) for the word "I" which is what the comic font I use does.
+- For the comic font I use, "{" and "}" are shown as crows feet, allowing simple inline "{GROAN}" for emotions.
 
 
-Example:
+## Example:
 
+The following shows gives a feeling of what i would type in and format myself. I would style the first line with "Title" style, the second line with "Sub-title", and the third line with "Heading 1" manually in Google docs.
 
+```
                 MY TITLE DOCUMENT
                     Episode 1
-
+Script
 Thank you for reading this script. Please send any feedback to me! Let's get into it!
 
 # Introduce Sam
@@ -90,44 +88,36 @@ Thank you for reading this script. Please send any feedback to me! Let's get int
 EXT. OUTSIDE HOME - MIDAY
 
 [1-10-010] Establishing shot, pan from wide shot to focus on Sam's face
-
 Sam is running down the street.
 
 [1-10-020] Mid shot, frontal, tracking Sam as he runs
-
 Add a bloom effect to Sam's hair as a nice introductory effect.
 
-                -SAM-
-            (panting)
-        | AM SO LATE! | AM IN BIG TROUBLE
-        THIS TIME FOR SURE!
+-Sam-
+(panting)
+| AM SO LATE! | AM IN BIG TROUBLE THIS TIME FOR SURE!
 
 # Introduce Mrs B
-
 [1-10-030] Side shot showing Sam running past Mrs B
-
-                -MRS B-
-        OH, SAM! GREAT TIMING! CAN YOU GIVE ME
-        A HAND PLEASE?
+-MrsB-
+OH, SAM! GREAT TIMING! CAN YOU GIVE ME A HAND PLEASE?
 
 [1-10-040] Sam brushes her off
 
+-Sam-
+FORGET IT, | AM LATE FOR SCHOOL!
 Shocked expression on Mrs B's face.
-
-                -SAM-
-        FORGET IT, | AM LATE FOR SCHOOL!
 
 EXT. OUTSIDE FRONT OF SCHOOL - EARLY MORNING
 
 [1-20-010] Sam is running up to front of school
 
-                -TEACHER-
-        LATE AGAIN SAM? DETENTION FOR YOU!
+-Teacher-
+LATE AGAIN SAM? DETENTION FOR YOU!
+-Sam-
+{GROAN!}
+```
 
-                -SAM-
-        {GROAN!}
+Result:
 
-*/
-
-
-// ================================ IMPLEMENTATION CODE ===================================
+<img width="973" alt="Screen Shot 2022-03-23 at 2 03 59 PM" src="https://user-images.githubusercontent.com/5702163/159795584-8afa0ee7-81c0-4534-aa98-b4a4139dd193.png">

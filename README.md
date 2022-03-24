@@ -46,13 +46,13 @@ indenntation of Normal paragraphs.
 Paragraph styles:
 
 - `# heading` to `##### heading` (1 to 5 hashes followed by a space at the start of a paragraph). Converted to a level 2 to level 6 heading allow outlining mixed into the script. Level 1 headings are left to the author to insert manually, as required.
-- `EXT. Corner shop - DAY` ("EXT." at the start of a paragraph). Converted to bold like a heading. It represents a new external (outside) location and time of day. Normally would be followed by actions and dialog until a new location is started.
-- `INT. Kitchen - EVENING` is also converted to a bold like a heading. It represents a new internal (inside) location and time of day.
-- `-CHARACTER-` - Indented 2" inserted before dialog (and optional parentheticals).
-- `(parenthetical)` - Indented 1.5". Optionally used after the character name and before dialog to provide guiadence to the speaker on emtions or similar. 
+- `EXT. Corner shop - DAY` ("EXT." at the start of a paragraph). Converted to bold like a heading with no indent. It represents a new external (outside) location and time of day. Normally would be followed by actions and dialog until a new location is started. Each location for the script is like a new section. I don't use a heading style as a logical part of an episode structure might jump between a few locations.
+- `INT. Kitchen - EVENING` is also converted to a bold with no indent. It represents a new internal (inside) location and time of day.
+- `-CHARACTER-` - Indented 2.5" inserted before dialog (and optional parentheticals).
+- `(parenthetical)` - Indented 2". Optionally used after the character name and before dialog to provide guiadence to the speaker on emtions or similar. 
 - `ALL CAPS TEXT` (text with no lower case letters). Indented 1". I use all caps text for speech bubble text, so I use all caps text (punctuation is allowed) to spot dialog.
-- `[label] Mixed case text` (paragraphs starting with some text in brackets ("[" and "]") followed by text and punctuation with at least one lower case letter). No indent, but the brackets and enclosed text are bolded. I use this to insert frame labels/identifiers for reference purposes.
-- `All other text` (text that does not match any other rule above and contains at least one lower case letter). No indent. For actions, camera directions, etc.
+- `[label] Mixed case text` (paragraphs starting with some text in brackets ("[" and "]") followed by text and punctuation with at least one lower case letter). 0.5" indent with the brackets and enclosed text bolded. I use this to insert frame labels/identifiers for reference purposes.
+- `All other text` (text that does not match any other rule above and contains at least one lower case letter). 0.5" indent. For actions, camera directions, etc.
 - `>CENTER<` (paragraphs starting with ">" and ending with "<"). Centers the text (e.g. "> THE END <").
 - `INSTRUCTION:` (paragraphs ending with ":"). Right justify the instructions (e.g. "FADE TO:"). Could be used to indicate page break points or similar
 - blank lines may be dropped or inserted by the formatter as it feels best.
